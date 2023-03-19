@@ -1,5 +1,5 @@
 from django.contrib import admin
-from consultasapp.models import Medico, Paciente
+from RestConsulta.models import Medico, Paciente
 
 class Medicos(admin.ModelAdmin):
     list_display=('id','nome','rg','especialidade','data_nascimento','sexo','experiencia','crm_medico')
