@@ -5,12 +5,12 @@ from rest_framework import routers
 
 
 router = routers.DefaultRouter()
-router.register('api-medicos',MedicosViewSet, basename='Medicos')
-router.register('api-pacientes',PacientesViewSet, basename='Pacientes')
+router.register("api-medicos", MedicosViewSet, basename="Medicos")
+router.register("api-pacientes", PacientesViewSet, basename="Pacientes")
 
 urlpatterns = [
-    path('grappelli/', include('grappelli.urls')),
-    path('admin/', admin.site.urls),
-    path('', include(router.urls)),
+    path("grappelli/", include("grappelli.urls")),
+    path("admin/", admin.site.urls),
+    path("", include(router.urls)),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

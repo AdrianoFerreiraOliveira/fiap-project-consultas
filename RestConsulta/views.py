@@ -5,15 +5,17 @@ from rest_framework.authentication import BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
 
 
-
 class MedicosViewSet(viewsets.ModelViewSet):
-    """ Exibindo a lista de médicos"""
+    """Exibindo a lista de médicos"""
+
     queryset = Medico.objects.all()
     serializer_class = MedicoSerializer
-    authentication_classes =[BasicAuthentication]
+    authentication_classes = [BasicAuthentication]
     permission_classes = [IsAuthenticated]
 
+
 class PacientesViewSet(viewsets.ModelViewSet):
-    """ Exibindo a lista de pacientes"""
+    """Exibindo a lista de pacientes"""
+
     queryset = Paciente.objects.all()
-    serializer_class =PacienteSerializer 
+    serializer_class = PacienteSerializer
